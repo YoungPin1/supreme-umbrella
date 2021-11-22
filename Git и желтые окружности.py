@@ -1,4 +1,5 @@
 import sys
+from random import randrange
 
 from PyQt5 import uic
 from PyQt5.QtGui import QPainter, QColor
@@ -30,7 +31,7 @@ class Circle(QMainWindow):
         qp.setBrush(QColor(255, 255, 0))
         for i in range(4):
             for j in range(7):
-                qp.drawEllipse(10 + 110 * j, 10 + 110 * i, 100, 100)
+                qp.drawEllipse(10 + randrange(50, 110) * j, 10 + randrange(50, 110) * i, 100, 100)
 
 
 if __name__ == '__main__':
