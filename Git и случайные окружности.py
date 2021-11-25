@@ -3,6 +3,7 @@ from random import randrange
 
 from PyQt5.QtGui import QPainter, QColor
 from PyQt5.QtWidgets import QApplication, QMainWindow
+
 from UI import Ui_MainWindow
 
 
@@ -30,8 +31,9 @@ class Circle(QMainWindow, Ui_MainWindow):
     def draw_flag(self, qp):
         for i in range(4):
             for j in range(7):
+                randius = randrange(50, 100)
                 qp.setBrush(QColor(randrange(0, 255), randrange(0, 255), randrange(0, 255)))
-                qp.drawEllipse(10 + randrange(50, 110) * j, 10 + randrange(50, 110) * i, 100, 100)
+                qp.drawEllipse(10 + randrange(50, 110) * j, 10 + randrange(50, 110) * i, randius, randius)
 
 
 if __name__ == '__main__':
